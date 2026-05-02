@@ -1,0 +1,91 @@
+# Breeze Dark Custom
+
+A KDE Plasma 6 desktop theme based on **Breeze Dark**, with visual modifications to the taskbar widgets.
+
+## Installation
+
+Plasma looks for user themes in:
+
+```
+~/.local/share/plasma/desktoptheme/
+```
+
+Clone or copy the `breeze-custom` folder there:
+
+```bash
+cp -r breeze-custom ~/.local/share/plasma/desktoptheme/
+```
+
+The folder name determines the theme ID used by `plasma-apply-desktoptheme`. Do not rename it unless you also update the `Id` field in `metadata.json`.
+
+To apply the theme:
+
+```bash
+plasma-apply-desktoptheme breeze-custom
+```
+
+You can also apply it from **System Settings → Appearance → Plasma Style**.
+
+## File structure
+
+```
+~/.local/share/plasma/desktoptheme/breeze-custom/
+├── colors          # Color palette (based on stock Breeze Dark)
+├── plasmarc        # Shell visual effects (contrast, saturation, transparency)
+├── metadata.json   # Theme metadata (ID: breeze-custom)
+└── widgets/
+    ├── tasks.svgz  # Taskbar indicators (customized)
+    └── clock.svg   # Clock widget
+```
+
+Any widget not present in the `widgets/` folder is automatically inherited from the system **Breeze Dark** theme.
+
+## Customized widgets
+
+### tasks.svgz
+
+Visual indicators for the taskbar (active window, hover, minimized, etc.).
+
+Colors used:
+
+| Role         | Hex       |
+|--------------|-----------|
+| Active       | `#3daee9` |
+| Active light | `#93cee9` |
+| Glow         | `#b3e5fa` |
+| Glow subtle  | `#dceef7` |
+
+## Editing SVG widgets
+
+`.svgz` files are gzip-compressed SVGs. To edit them:
+
+```bash
+# Decompress
+zcat widgets/tasks.svgz > /tmp/tasks.svg
+
+# Edit /tmp/tasks.svg with a text editor or Inkscape
+
+# Recompress
+gzip -9 -c /tmp/tasks.svg > widgets/tasks.svgz
+
+# Apply changes
+plasma-apply-desktoptheme breeze-custom
+```
+
+## Breeze Dark color reference
+
+| Role           | RGB            | Hex       |
+|----------------|----------------|-----------|
+| Window bg      | 32, 35, 38     | `#202326` |
+| View bg        | 20, 22, 24     | `#141618` |
+| Text           | 252, 252, 252  | `#fcfcfc` |
+| Accent (link)  | 29, 153, 243   | `#1d99f3` |
+| Positive       | 39, 174, 96    | `#27ae60` |
+| Negative       | 218, 68, 83    | `#da4453` |
+| Neutral        | 246, 116, 0    | `#f67400` |
+| Visited        | 155, 89, 182   | `#9b59b6` |
+
+## Resources
+
+- [Plasma Theme Development — KDE Docs](https://develop.kde.org/docs/plasma/theme/)
+- [Plasma SVG element IDs](https://develop.kde.org/docs/plasma/theme/theme-elements/)
