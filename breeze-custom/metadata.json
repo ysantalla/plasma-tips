@@ -2,8 +2,8 @@
     "KPlugin": {
         "Authors": [
             {
-                "Email": "kde-artists@kde.org",
-                "Name": "KDE Visual Design Group",
+                "Email": "ysantalla880919@gmail.com",
+                "Name": "Ing. Yasmany Santalla",
                 "Name[ar]": "مجموعة التصميم المرئي لكِيدِي",
                 "Name[az]": "KDE Vizual Dizayn Qrupu",
                 "Name[be]": "Суполка візуальнага дызайну KDE",
@@ -53,7 +53,7 @@
             }
         ],
         "Category": "",
-        "Description": "Breeze Dark by the KDE VDG",
+        "Description": "Customized Breeze Dark theme with modified taskbar indicators",
         "Description[ar]": "نسيم داكن من من مجموعة تصميم كِيدِي",
         "Description[az]": "KDE VDG tərəfindən Breeze Qara",
         "Description[be]": "Breeze Dark ад KDE VDG",
@@ -101,8 +101,8 @@
         "Description[zh_CN]": "Breeze 微风深色主题，由 KDE VDG (视觉设计团队) 设计制作",
         "Description[zh_TW]": "由 KDE VDG 設計的 Breeze Dark",
         "EnabledByDefault": true,
-        "Id": "breeze-dark-custom",
-        "License": "LGPL",
+        "Id": "breeze-custom",
+        "License": "LGPL-2.1-or-later",
         "Name": "Breeze Dark Custom",
         "Name[ar]": "نسيم داكن",
         "Name[az]": "Breeze Qara",
@@ -150,8 +150,8 @@
         "Name[vi]": "Breeze Tối",
         "Name[zh_CN]": "Breeze 微风深色",
         "Name[zh_TW]": "Breeze Dark",
-        "Version": "6.22.0",
+        "Version": "1.0.0",
         "Website": "https://www.kde.org/"
     },
-    "X-Plasma-API": "5.0"
+    "X-Plasma-API": "6.0"
 }
