@@ -64,6 +64,7 @@ ForegroundVisited=155,89,182
 
 [Colors:Selection]
 BackgroundAlternate=30,87,116
+BackgroundNormal=61,174,233
 ForegroundActive=252,252,252
 ForegroundInactive=161,169,177
 ForegroundLink=253,188,75
@@ -115,9 +116,9 @@ shadeSortColumn=true
 contrast=4
 
 [WM]
-activeBackground=39,44,49
+activeBackground=44,49,58
 activeBlend=252,252,252
 activeForeground=252,252,252
-inactiveBackground=32,36,40
+inactiveBackground=27,31,35
 inactiveBlend=161,169,177
 inactiveForeground=161,169,177
