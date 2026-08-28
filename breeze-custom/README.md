@@ -46,14 +46,19 @@ Any widget not present in the `widgets/` folder is automatically inherited from 
 
 Visual indicators for the taskbar (active window, hover, minimized, etc.).
 
-Colors used:
+Indicator colors follow the active system color scheme (including the accent
+color) via Plasma's stylesheet mechanism: elements use `fill:currentColor`
+plus a `ColorScheme-*` class, and Plasma rewrites the embedded
+`<style id="current-color-scheme">` block at load time.
 
-| Role         | Hex       |
-|--------------|-----------|
-| Active       | `#3daee9` |
-| Active light | `#93cee9` |
-| Glow         | `#b3e5fa` |
-| Glow subtle  | `#dceef7` |
+| Role                        | Class                         | Breeze Dark fallback |
+|-----------------------------|-------------------------------|----------------------|
+| Focus / progress / active   | `ColorScheme-ButtonFocus`     | `#3daee9`            |
+| Hover / focus glow          | `ColorScheme-ButtonHover`     | `#93cee9`            |
+| Attention                   | `ColorScheme-NeutralText`     | `#f67400`            |
+| Normal / minimized (mono)   | `ColorScheme-Text` + opacity  | `#eff0f1`            |
+| Group expander chip         | `ColorScheme-Highlight`       | `#3daee9`            |
+| Group expander dots         | `ColorScheme-HighlightedText` | `#fcfcfc`            |
 
 ## Editing SVG widgets
 
