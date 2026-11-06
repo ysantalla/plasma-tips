@@ -26,6 +26,15 @@ plasma-apply-desktoptheme breeze-custom
 
 You can also apply it from **System Settings → Appearance → Plasma Style**.
 
+## Color scheme
+
+`color-schemes/BreezeDarkCustom.colors` holds the matching system colors. Install and apply it with:
+
+```bash
+cp color-schemes/BreezeDarkCustom.colors ~/.local/share/color-schemes/
+plasma-apply-colorscheme BreezeDarkCustom
+```
+
 ## File structure
 
 ```
